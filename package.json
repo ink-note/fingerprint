@@ -1,0 +1,52 @@
+{
+  "name": "@dilanjer/fingerprint",
+  "version": "0.0.2",
+  "description": "Server-side fingerprinting library for framework NestJs",
+  "main": "dist/index.js",
+  "author": "dilanjer",
+  "module": "dist/index.js",
+  "repository": "dilanjer/@dilanjer/fingerprint",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "nest build",
+    "build:dev": "nest build && cd example && npm link @dilanjer/fingerprint && npm run start:dev",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "test": "cd example && npm i && cd ../ && jest --config jest-test.json",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "@nestjs/testing": "^10.4.13",
+    "@types/geoip-lite": "^1.4.4",
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
+    "tslint": "^6.1.3",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.4.13",
+    "@nestjs/core": "^10.4.13",
+    "@nestjs/platform-express": "^10.4.13",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.1",
+    "geoip-lite": "^1.4.10",
+    "murmurhash3js": "^3.0.1",
+    "request-ip": "^3.3.0",
+    "ua-parser-js": "^2.0.0"
+  }
+}
