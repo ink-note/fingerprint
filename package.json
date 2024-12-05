@@ -1,6 +1,6 @@
 {
   "name": "@dilanjer/fingerprint",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Server-side fingerprinting library for framework NestJs",
   "main": "dist/index.js",
   "author": "dilanjer",
