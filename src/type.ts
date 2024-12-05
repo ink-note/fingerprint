@@ -51,7 +51,7 @@ export interface Location {
   city: string;
 }
 
-export interface IFingerprint extends AcceptHeader, UserAgent, IpAddress {
+export interface FingerPrint extends AcceptHeader, UserAgent, IpAddress {
   id: string;
   headers: AcceptHeader;
   userAgent: UserAgent;

@@ -1,9 +1,9 @@
-import { Controller, Get } from '@nestjs/common';
-import { Fingerprint, RealIp } from '@dilanjer/fingerprint';
+import { Controller, FileTypeValidator, Get } from '@nestjs/common';
+import { Fingerprint, FingerPrint, RealIp } from '@dilanjer/fingerprint';
 @Controller()
 export class AppController {
   @Get()
-  getFingerprint(@Fingerprint() fp: Fingerprint): Fingerprint {
+  getFingerprint(@Fingerprint() fp: FingerPrint): FingerPrint {
     return fp;
   }
 

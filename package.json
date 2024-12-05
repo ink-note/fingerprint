@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "build": "nest build",
-    "build:dev": "nest build && cd example && npm link @dilanjer/fingerprint && npm run start:dev",
+    "build:dev": "nest build && cd example && npm link @dilanjer/fingerprint && pnpm install && pnpm start:dev",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",

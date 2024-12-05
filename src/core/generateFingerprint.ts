@@ -3,7 +3,7 @@ import { x64 } from "murmurhash3js";
 import * as requestIp from "request-ip";
 import {
   AcceptHeader,
-  IFingerprint,
+  FingerPrint,
   IpAddress,
   Parameters,
   UserAgent,
@@ -19,12 +19,12 @@ import uniqueParams from "../helpers/uniqueParams";
  *
  * @param {Request} req - The request object.
  * @param {Parameters[]} params - An array of parameters.
- * @return {IFingerprint} - An object containing the generated fingerprint.
+ * @return {FingerPrint} - An object containing the generated fingerprint.
  */
 export default function generateFingerprint(
   req: Request,
   params: Parameters[]
-): IFingerprint {
+): FingerPrint {
   params = uniqueParams(params);
 
   if (params.length === 0) {
@@ -43,7 +43,7 @@ export default function generateFingerprint(
   return {
     id,
     ...object,
-  } as IFingerprint;
+  } as FingerPrint;
 }
 
 /**
