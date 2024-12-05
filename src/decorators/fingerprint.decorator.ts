@@ -12,4 +12,4 @@ export const Fingerprint = createParamDecorator(
   }
 );
 
-export interface Fingerprint extends IFingerprint {}
+export interface FingerPrint extends IFingerprint {}
